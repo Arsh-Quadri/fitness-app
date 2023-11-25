@@ -1,38 +1,123 @@
-.App {
-  text-align: center;
+.navbar {
+  box-shadow: 0 4px 15px -6px rgb(191, 191, 191);
+  background: rgba(47, 47, 47, 0.8);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* SLIDER */
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.seleted {
+  border-top: 6px solid #63da28;
+  background-color: rgb(246, 246, 246);
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.image-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
 }
 
-.App-link {
-  color: #61dafb;
+.image-container::-webkit-scrollbar {
+  width: 6px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.image-container::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.image-container::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.image-wrapper {
+  display: flex;
+  flex-shrink: 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-item {
+  flex-shrink: 0;
+  width: 250px;
+  /* margin: 10px; */
+}
+
+.image-item img {
+  transition: transform 0.4s ease-in-out;
+}
+
+.image-item:hover img {
+  transform: scale(1.1);
+}
+
+/* exers. card */
+.exercise-card {
+  border-top: 6px solid #65dd2a;
+  cursor: pointer;
+}
+
+.para1 {
+  font-family: "Tilt Prism", cursive;
+}
+.para2,
+.SearchHead {
+  font-family: "Teko", sans-serif;
+}
+
+.link1:hover {
+  color: rgb(85, 212, 85);
+}
+.link1:hover > .l1 {
+  display: block;
+}
+
+.link2:hover {
+  color: rgb(85, 212, 85);
+}
+.link2:hover > .l2 {
+  display: block;
+}
+
+.link3:hover {
+  color: rgb(85, 212, 85);
+}
+.link3:hover > .l3 {
+  display: block;
+}
+
+.getStarted {
+  box-shadow: 0 10px 10px -6px rgb(0, 0, 0);
+  transition: transform 400ms ease-in-out;
+}
+.getStarted:hover {
+  transform: scale(1.1);
+}
+
+@media (min-width: 430px) and (max-width: 638px) {
+  .heroImg {
+    width: 300px;
+    top: 35%;
+    left: 40%;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media screen and (max-width: 430px) {
+  .heroImg {
+    width: 250px;
+    top: 45%;
+    left: 20%;
+  }
+  .getStarted {
+    transform: scale(0.8);
+    position: relative;
+    left: -10%;
+  }
+  .getStarted:hover {
+    transform: scale(0.8);
   }
 }
