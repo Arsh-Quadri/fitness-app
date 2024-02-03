@@ -9,7 +9,7 @@ const HorizontalScrollbar = ({ data, bodyPart, setBodyPart, isBodyPart }) => {
             prevIndex >= data.length - 3 ? 0 : prevIndex + 1
         );
     };
-    console.log(bodyPart)
+    // console.log(bodyPart)
     // console.log(data)
     const handlePrevious = () => {
         setCurrentImageIndex((prevIndex) =>
@@ -28,12 +28,12 @@ const HorizontalScrollbar = ({ data, bodyPart, setBodyPart, isBodyPart }) => {
                     }}
                 >
                     {data.map((item) => (
-                        <>
+                        <div key={item.id || item}>
                             {isBodyPart ?
                                 <div key={item.id || item} itemID={item.id || item} title={item.id || item} className={item === bodyPart ? `seleted rounded-lg image-item w-[200px] px-7 py-4` : 'p-7 cursor-pointer image-item w-[200px]'}
                                     onClick={() => {
                                         setBodyPart(item);
-                                        window.scrollTo({ top: 1200, left: 100, behavior: 'smooth' })
+                                        window.scrollTo({ top: 1050, left: 0, behavior: 'smooth' })
                                     }}>
                                     <img
                                         src="https://inshapegym.co.uk/wp-content/uploads/2023/03/Inshape-Logo-03.png"
@@ -47,7 +47,7 @@ const HorizontalScrollbar = ({ data, bodyPart, setBodyPart, isBodyPart }) => {
 
                                 <ExerciseCard exercise={item} />
                             }
-                        </>
+                        </div>
                     ))}
                 </div>
             </div>

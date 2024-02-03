@@ -17,17 +17,17 @@ const Navbar = () => {
             <div className="hamberger block md:hidden">
                 <img src="https://www.clipartmax.com/png/full/36-365828_navbar-toggle-icon-menu-hamburger-png-white.png" className='w-[30px] cursor-pointer' alt="bergericon" onClick={handleToggle} />
             </div>
-            <div className={` sidebar absolute top-[75px] left-0 h-screen bg-slate-800 text-2xl font-[600] pt-5 text-gray-50 w-[70%] ${isOpen ? "block" : "hidden"}`}>
-                <div className="m-8 flex gap-8 items-center cursor-pointer">
+            <div className={` sidebar absolute top-[75px] left-0 h-screen bg-slate-800 text-2xl font-[600] pt-5 text-gray-50 w-[80%] ${isOpen ? "block" : "hidden"}`}>
+                <div className="m-8 flex gap-8 items-center cursor-pointer p-5 border-b">
                     <FontAwesomeIcon icon={faHouse} />
                     <Link to="/" onClick={handleToggle}>Home</Link></div>
-                <div className="m-8 flex gap-8 items-center cursor-pointer">
+                <div className="m-8 flex gap-8 items-center cursor-pointer p-5 border-b">
                     <FontAwesomeIcon icon={faDumbbell} />
                     <p>Workouts</p></div>
-                <div className="m-8 flex gap-8 items-center cursor-pointer">
+                <div className="m-8 flex gap-8 items-center cursor-pointer p-5 border-b">
                     <FontAwesomeIcon icon={faListCheck} />
                     <p>Programs</p></div>
-                <div className="m-8 flex gap-8 items-center cursor-pointer">
+                <div className="m-8 flex gap-8 items-center cursor-pointer p-5 border-b">
                     <FontAwesomeIcon icon={faRightToBracket} />
                     <p>Log In</p></div>
 
@@ -36,16 +36,16 @@ const Navbar = () => {
                 <img src="https://www.pngkey.com/png/full/984-9845006_anytime-fitness-logo-anytime-fitness.png" alt="logo" className='w-[120px] sm:w-[140px] md:w-[180px]' />
             </div>
             <div className="links hidden gap-[5vw] md:flex text-xl font-[600] text-gray-90 text-white">
-                <div className='link1'>
+                <div className='link1 relative'>
                     <Link to="/">Home</Link>
-                    <div className='l1 hidden w-[4%] h-[3px] bg-green-500 absolute bottom-0'></div></div>
-                <div className='link2'>
+                    <div className='l1 w-[6.5%] h-[3px] bg-green-500 absolute -bottom-6'></div></div>
+                <div className='link2 relative'>
                     <Link to="/workouts">Workouts</Link>
-                    <div className='l2 hidden w-[6.5%] h-[3px] bg-green-500 absolute bottom-0'></div>
+                    <div className='l2 w-[6.5%] h-[3px] bg-green-500 absolute -bottom-6'></div>
                 </div>
-                <div className='link3'>
+                <div className='link3 relative'>
                     <Link to="/programs">Programs</Link>
-                    <div className='l3 hidden w-[6.4%] h-[3px] bg-green-500 absolute bottom-0'></div>
+                    <div className='l3 w-[6.4%] h-[3px] bg-green-500 absolute -bottom-6'></div>
                 </div>
             </div>
             <div className="login flex gap-3">
@@ -55,7 +55,7 @@ const Navbar = () => {
                 <div className="username hidden md:block">
                     <div className="text-sm text-gray-80 text-white">signed in as</div>
                     <div className="font-bold text-gray-80 text-white">
-                        <Link to="/signin">Sign In</Link></div>
+                        <Link to="/">Sign In</Link></div>
                 </div>
             </div>
         </div>

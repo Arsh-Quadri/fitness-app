@@ -1,8 +1,9 @@
 import React from 'react'
+import Loader from './Loader';
 
 const ExerciseVideos = ({ exerciseVideos, name }) => {
     // console.log({ exerciseVideos } + '111')
-    if (!exerciseVideos.length) return 'loading...';
+    if (!exerciseVideos.length) return (<Loader />);
     return (
         <div className='p-[20px] mt-[20px] sm:mt-[50px] md:mt-[70px] lg:mt-[100px]'>
             <p className='text-4xl font-[600] mb-[33px]'>

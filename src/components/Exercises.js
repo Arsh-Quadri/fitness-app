@@ -38,7 +38,7 @@ const Exercises = ({ exercises, bodyPart, setExercises }) => {
             <h3 className='text-3xl mb-[46px]'>Showing Results</h3>
             <div className="flex flex-wrap justify-center lg:gap-[110px] sm:gap-[70px]">
                 {currentExercises.map((exercise, index) => (
-                    <ExerciseCard index={index} exercise={exercise} />
+                    <ExerciseCard key={index} index={index} exercise={exercise} />
                 ))}
             </div>
             <div className="mt-[110px] flex justify-center">
@@ -51,6 +51,7 @@ const Exercises = ({ exercises, bodyPart, setExercises }) => {
                         page={currentPage}
                         onChange={paginate}
                         size='large'
+                        boundaryCount={0}
                     />
                 )}
             </div>

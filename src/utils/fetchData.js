@@ -21,7 +21,7 @@ export const youtubeOptions = {
 export const fetchData = async (url, options) => {
     const responce = await fetch(url, options);
     const data = await responce.json();
-    console.log(data)
+    // console.log(data)
 
     return data;
 
@@ -39,10 +39,10 @@ export const fetchDataById = async (id) => {
 
     try {
         const response = await axios.request(options);
-        console.log('Response:', response);
+        // console.log('Response:', response);
         return response.data;
     } catch (error) {
-        console.error(error);
+        // console.error(error);
         throw error;
     }
 };
@@ -51,6 +51,6 @@ export const fetchDataById = async (id) => {
         const response = await axios.request(youtubeOptions);
         console.log(response.data);
     } catch (error) {
-        console.error(error);
+        // console.error(error);
     }
 })();

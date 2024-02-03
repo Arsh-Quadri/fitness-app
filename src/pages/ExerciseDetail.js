@@ -14,6 +14,8 @@ const ExerciseDetail = () => {
     const { id } = useParams(); // Invoke useParams to get the route parameters
 
     useEffect(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+
         const fetchExerciseData = async () => {
             const exerciseDbUrl = 'https://exercisedb.p.rapidapi.com';
             const youtubeSearchUrl = 'https://youtube-search-and-download.p.rapidapi.com';
